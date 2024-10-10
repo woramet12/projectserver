@@ -1,18 +1,18 @@
 <template>
     <div>
-        <h2>Get all blogs</h2>
-        <h4>จำนวน blog {{blogs.length}}</h4>
-        <p><button v-on:click="navigateTo('/blog/create')">สร้าง blog</button></p>
+        <h2>สนามฟุตบอลพรีเมียร์ลีค</h2>
+        <h4>จำนวนสนาม {{blogs.length}}</h4>
+        <p><button v-on:click="navigateTo('/blog/create')">เพิ่มสนาม</button></p>
         <div class="content-grid">
             <div v-for="blog in blogs" v-bind:key="blog.id" class="blog-card">
-                <p>id: {{ blog.id }}</p>
-                <p>title: {{ blog.title }}</p>
-                <p>content: {{ blog.content }}</p>
+                <p>สนามที่: {{ blog.id }}</p>
+                <p>ชื่อทีม: {{ blog.title }}</p>
+                <p>ชื่อสนาม: {{ blog.content }}</p>
                 <p>category: {{ blog.category }}</p>
                 <p>status: {{ blog.status }}</p>
                 <p>
-                    <button v-on:click="navigateTo('/blog/' + blog.id)">ดู blog</button>
-                    <button v-on:click="navigateTo('/blog/edit/' + blog.id)">แก้ไข blog</button>
+                    <button v-on:click="navigateTo('/blog/' + blog.id)">ดูข้อมูล</button>
+                    <button v-on:click="navigateTo('/blog/edit/' + blog.id)">แก้ไข</button>
                     <button v-on:click="deleteBlog(blog)">ลบข้อมูล</button>
                 </p>
             </div>

@@ -1,9 +1,9 @@
 <template>
     <div>
         <h1>Show Blog</h1>
-        <p>id: {{ blog.id }}</p>
-        <p>title: {{ blog.title }}</p>
-        <p>content: {{ blog.content }}</p>
+        <p>สนามที่: {{ blog.id }}</p>
+        <p>ชื่อทีม: {{ blog.title }}</p>
+        <p>ชื่อสนาม: {{ blog.content }}</p>
         <p>category: {{ blog.category }}</p>
         <p>status: {{ blog.status }}</p>
         <p>

@@ -4,9 +4,9 @@
       <!-- ส่วนของโลโก้ -->
       <img src="https://upload.wikimedia.org/wikipedia/th/thumb/1/12/PL_Logo.svg/1200px-PL_Logo.svg.png" alt="โลโก้" class="nv-logo" />
       <ul class="nav">
-        <li><router-link :to="{ name: 'blogs' }">add a football field</router-link></li>
-        <li><router-link :to="{ name: 'users' }">Users</router-link></li>
+        <li><router-link :to="{ name: 'blogs' }">add a football field</router-link></li>  
         <li><router-link :to="{ name: 'comments' }">Comments</router-link></li>
+        <li><router-link :to="{ name: 'users' }">Users</router-link></li>
         <!-- ถ้า isLogin เป็นจริง ให้แสดงเมนูออกจากระบบ มิฉะนั้น ให้แสดงเมนูเข้าสู่ระบบ -->
         <li v-if="isLogin()">
           <a @click="logout">Logout</a>

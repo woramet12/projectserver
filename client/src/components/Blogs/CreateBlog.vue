@@ -1,10 +1,14 @@
 <template>
   <div>
-    <h1>Create Blog</h1>
+    <h1>เพิ่มสนาม</h1>
     <form v-on:submit.prevent="createBlog">
       <p>
-        title:
+        ชื่อทีม:
         <input type="text" v-model="blog.title" />
+      </p>
+      <p>
+        ชื่อสนาม:
+        <input type="text" v-model="blog.content" />
       </p>
       <transition name="fade">
         <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
@@ -27,8 +31,7 @@
           />
           <!-- <p v-if="isInitial || isSuccess"> -->
           <p v-if="isInitial">
-            Drag your file(s) here to begin<br />
-            or click to browse
+            เพิ่มรูปสนามฟุตบอล
           </p>
           <p v-if="isSaving">Uploading {{ fileCount }} files...</p>
           <p v-if="isSuccess">Upload Successful.</p>
@@ -51,26 +54,21 @@
         </transition-group>
         <div class="clearfix"></div>
       </div>
+     
+      
       <p>
-        <strong>content:</strong>
+      จำนวนความจุผู้เข้าชม:
+       <input type="number" v-model="blog.category" />
       </p>
-      <vue-ckeditor
-        v-model.lazy="blog.content"
-        :config="config"
-        @blur="onBlur($event)"
-        @focus="onFocus($event)"
-      />
-      <p>
-        category:
-        <input type="text" v-model="blog.category" />
-      </p>
+
       <p>
         status:
         <input type="text" v-model="blog.status" />
       </p>
       <p>
-        <button type="submit">create blog</button>
-      </p>
+       <button type="submit">เสร็จสิน</button>
+    </p>
+
     </form>
   </div>
 </template>
@@ -98,6 +96,7 @@ export default {
       pictureIndex: 0,
       blog: {
         title: "",
+        content: "",  // เพิ่มฟิลด์ content ในตัวแปร blog
         thumbnail: "null",
         pictures: "null",
         content: "",
