@@ -60,9 +60,12 @@
       จำนวนความจุผู้เข้าชม:
        <input type="number" v-model="blog.category" />
       </p>
-
       <p>
-        status:
+      ที่อยู่ของสนาม:
+       <input type="text" v-model="blog.address" />
+      </p>
+      <p>
+        สถานะ:
         <input type="text" v-model="blog.status" />
       </p>
       <p>

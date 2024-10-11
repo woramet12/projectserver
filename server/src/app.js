@@ -21,7 +21,7 @@ require('./routes')(app);
 
 let port = config.port;
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ alter: true }).then(() => {
     app.listen(port, function () {
         console.log('Server running on ' + port)
     })

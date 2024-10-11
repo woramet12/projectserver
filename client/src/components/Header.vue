@@ -39,7 +39,7 @@ export default {
 .nv-navbar {
   background-color: palegoldenrod;
   width: 100%;
-  padding: 5px 4px; /* ลด padding ด้านซ้ายให้เหลือ 10px */
+  padding: 5px 2px; /* ลด padding ด้านซ้ายให้เหลือ 10px */
   display: flex;
   align-items: center;
 }

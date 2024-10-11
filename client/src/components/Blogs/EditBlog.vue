@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Edit Blog</h1>
+    <h1>เเก้ไขข้อมูล</h1>
     <form v-on:submit.prevent="editBlog">
       <p>title: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
@@ -53,8 +53,12 @@
         @blur="onBlur($event)"
         @focus="onFocus($event)"
       />
-      <p>category: <input type="text" v-model="blog.category" /></p>
-      <p>status: <input type="text" v-model="blog.status" /></p>
+      <p>จำนวนความจุผู้เข้าชม: <input type="text" v-model="blog.category" /></p>
+      <p>
+      ที่อยู่ของสนาม:
+       <input type="text" v-model="blog.address" />
+      </p>
+      <p>สถานะ: <input type="text" v-model="blog.status" /></p>
       <p>
         <button type="submit">update blog</button>
         <button v-on:click="navigateTo('/blogs')">กลับ</button>
