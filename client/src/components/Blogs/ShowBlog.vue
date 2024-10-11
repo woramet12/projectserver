@@ -7,7 +7,7 @@
         <p>สนามที่: {{ blog.id }}</p>
         <p>ชื่อทีม: {{ blog.title }}</p>
         <p>ชื่อสนาม: {{ blog.content }}</p>
-        <p>จำนวนความจุผู้เข้าชม: {{ blog.category }} คน</p>
+        <p>จำนวนความจุผู้เข้าชม: {{ blog.category }} ที่นัง</p>
         <p>ที่อยู่ของสนาม: {{ blog.address }}</p>
         <p>สถานะ: {{ blog.status }}</p>
         <p>วันที่สร้าง: {{ formatDate(blog.createdAt) }}</p>

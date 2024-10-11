@@ -2,12 +2,16 @@
   <div>
     <h1>เเก้ไขข้อมูล</h1>
     <form v-on:submit.prevent="editBlog">
-      <p>title: <input type="text" v-model="blog.title" /></p>
+      <p>ชื่อทีม: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
         <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
           <img :src="BASE_URL + blog.thumbnail" alt="thumbnail" />
         </div>
       </transition>
+      <p>
+        ชื่อสนาม:
+        <input type="text" v-model="blog.content" />
+      </p>
       <form enctype="multipart/form-data" novalidate>
         <div class="dropbox">
           <input
@@ -40,27 +44,23 @@
           />
           <br />
           <button v-on:click.prevent="useThumbnail(picture.name)">
-            Thumbnail
+         เพิ่มรูปภาพไปยังหน้าเเรก
           </button>
-          <button v-on:click.prevent="delFile(picture)">Delete</button>
+          <button v-on:click.prevent="delFile(picture)">ลบ</button>
         </li>
       </transition-group>
       <div class="clearfix"></div>
       <p><strong>content:</strong></p>
-      <vue-ckeditor
-        v-model.lazy="blog.content"
-        :config="config"
-        @blur="onBlur($event)"
-        @focus="onFocus($event)"
-      />
-      <p>จำนวนความจุผู้เข้าชม: <input type="text" v-model="blog.category" /></p>
+      
+      <p>จำนวนความจุผู้เข้าชม: <input type="text" v-model="blog.category" />ที่นั่ง</p>
       <p>
-      ที่อยู่ของสนาม:
-       <input type="text" v-model="blog.address" />
-      </p>
+  ที่อยู่ของสนาม:
+  <textarea v-model="blog.address" rows="4" cols="50" style="resize: both;"></textarea>
+</p>
+
       <p>สถานะ: <input type="text" v-model="blog.status" /></p>
       <p>
-        <button type="submit">update blog</button>
+        <button type="submit">เสร็จสิน</button>
         <button v-on:click="navigateTo('/blogs')">กลับ</button>
       </p>
     </form>
@@ -352,7 +352,7 @@ export default {
 </script>
 <style scoped>
 .dropbox {
-  outline: 2px dashed grey; /* the dash box */
+  outline: 2px dashed rgb(221, 39, 39); /* the dash box */
   outline-offset: -10px;
   background: lemonchiffon;
   color: dimgray;

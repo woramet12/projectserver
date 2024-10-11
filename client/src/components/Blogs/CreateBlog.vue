@@ -47,9 +47,9 @@
             />
             <br />
             <button v-on:click.prevent="useThumbnail(picture.name)">
-              Thumbnail
+             อัพโหลดรูปภาพไปยังหน้าเเรก
             </button>
-            <button v-on:click.prevent="delFile(picture)">Delete</button>
+            <button v-on:click.prevent="delFile(picture)">ลบ</button>
           </li>
         </transition-group>
         <div class="clearfix"></div>
@@ -61,9 +61,10 @@
        <input type="number" v-model="blog.category" />
       </p>
       <p>
-      ที่อยู่ของสนาม:
-       <input type="text" v-model="blog.address" />
-      </p>
+  ที่อยู่ของสนาม:
+  <textarea v-model="blog.address" rows="4" cols="50" style="resize: both;"></textarea>
+</p>
+
       <p>
         สถานะ:
         <input type="text" v-model="blog.status" />
